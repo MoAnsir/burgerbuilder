@@ -3,16 +3,16 @@ import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
-  console.log("props.ingredients", props.ingredients);
+  //console.log("props.ingredients", props.ingredients);
 
   let transformedIngredients = Object.keys(props.ingredients).map(igKey => {
 
-    console.log("Map 1", props.ingredients);
+    //console.log("Map 1", props.ingredients);
     return [...Array(props.ingredients[igKey])].map((_, i) => {
 
-      console.log("Map 2", igKey);
+      //console.log("Map 2", igKey);
       if (igKey === "cheese" || igKey === "meat") {
-        console.log('In my test', igKey)
+        //console.log('In my test', igKey)
       }
       return <BurgerIngredient key={igKey + i} type={igKey} />;
     });
